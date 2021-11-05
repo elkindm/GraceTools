@@ -7,12 +7,12 @@ namespace GraceTools.EntityFrameworkCore
     {
         public static void Configure(DbContextOptionsBuilder<GraceToolsDbContext> builder, string connectionString)
         {
-            builder.UseSqlServer(connectionString);
+            builder.UseNpgsql(connectionString);
         }
 
         public static void Configure(DbContextOptionsBuilder<GraceToolsDbContext> builder, DbConnection connection)
         {
-            builder.UseSqlServer(connection);
+            builder.UseNpgsql(connection);
         }
     }
 }
